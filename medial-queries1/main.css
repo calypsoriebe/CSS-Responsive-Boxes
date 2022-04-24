@@ -1,3 +1,48 @@
 body {
   background: blanchedalmond;
 }
+body { margin:20px;   
+  background: blanchedalmond;    
+} 
+.container {   
+  display: flex;   
+  font-size: 50px;   
+  justify-content:space-around; 
+    padding:20px;   gap: 20px;   
+    flex-flow: row wrap;   
+   }  
+.a { height:15rem;     
+  width:45rem;   
+  background-color:cadetblue;  
+  } 
+.b { height:35rem;  
+   width:45rem;   
+   background-color:aqua; 
+    } 
+   .c { height:15rem;   
+    width:45rem;   
+    background-color:blue;   
+    align-items:stretch; 
+    } 
+.a, .c {  
+   flex-grow:1 
+  }  
+.b {   
+  min-height:15vh;   
+  flex-grow:10; 
+}     
+/* For mobile phones: */ 
+@media (min-width:300px) {   
+  .container {       
+    flex-direction: row;      
+     flex-wrap:wrap;
+ }   
+  .a{ width:100% }   
+  .b, .a, .c{
+    margin:1em 
+}   
+.c{      
+    width:auto;     
+    height:auto;    
+     min-height:15vh;   
+    } }
